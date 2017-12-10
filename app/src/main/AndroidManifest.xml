@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wellhome.cloudgroup.emecloud">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/map"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="63h7WaAUGiRA41xbgjft4sXc4GuNMCGg" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".StudentRegisterActivity"
+            android:label="@string/btn_register" >
+        </activity>
+        <activity
+            android:name=".TeacherRegiterActivity"
+            android:label="@string/btn_register" >
+        </activity>
+        <activity
+            android:name=".TeacherMapActivity"
+            android:label="@string/baidumap">
+        </activity>
+        <activity
+            android:name=".StudentMapActivity"
+            android:label="@string/baidumap">
+        </activity>
+        <activity
+            android:name="com.wellhome.cloudgroup.emecloud.Location_list"
+            android:label="@string/location_list">
+        </activity>
+        <activity
+            android:name="com.wellhome.cloudgroup.emecloud.Classmate_List"
+            android:label="@string/classmate_list">
+        </activity>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
